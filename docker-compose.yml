@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  php:
+    container_name: PHP
+    build: .
+    ports:
+    - "80:80"
+    - "443:443"
+    volumes:
+    - ./html:/var/www/html
+    - ./custom.php.ini:/usr/local/etc/php/php.ini
+

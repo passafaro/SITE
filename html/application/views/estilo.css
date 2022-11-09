@@ -1,0 +1,241 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Open+Sans:wght@300;800&display=swap');
+
+
+:root {
+	--cor-background-principal: #000;
+	--cor-fonte-clara: #fff;
+	--cor-fonte-escura: #000;
+	--estilo-fonte-principal: 'Montserrat', sans-serif;
+}
+
+* {
+	font-family: var(--estilo-fonte-principal);
+}
+
+header { 
+	background-color: var(--cor-background-principal);
+	border-bottom: solid 1px #fff;
+	outline: solid 2px var(--cor-background-principal);
+	position:fixed;
+}
+
+header nav { 
+	padding-left: 40px;
+}
+
+header nav a { 
+	line-height: 70px;
+	padding: 0px 20px;
+	font-family: var(--estilo-fonte-principal);
+	color: var(--cor-fonte-clara);
+	font-size: 20px;
+	letter-spacing: -1.1px;
+	text-decoration: none;
+}
+header nav a:hover { 
+	font-weight: bold;
+	color: var(--cor-fonte-clara);
+}
+
+header .redesSociaisTopo {
+	padding-top: 18px;
+}
+
+header .redesSociaisTopo a {
+	text-decoration: none;
+	float: right;
+	padding: 0px 3px;
+}
+
+header .redesSociaisTopoMobile {
+	margin: auto;
+	display: table;
+	padding: 18px 0px;
+}
+
+header .redesSociaisTopoMobile a {
+	text-decoration: none;
+	padding: 0px 3px;
+
+}
+
+#botaoNavMobile {
+	margin: auto;
+	display: table;
+	margin-bottom: 10px;
+}
+
+@media (max-width: 992px) { 
+	header nav.navMobile  {
+		padding: 0px;
+	}
+
+	header nav.navMobile a {
+		width: 100%;
+		display: block;
+		text-align: center;
+		height: 30px;
+		line-height: 30px;
+		border-top:dotted 1px #fff ;
+	}
+	header nav.navMobile a:first-child {
+		border-top:none;
+	}
+ }
+
+
+
+ #caixaInicio {
+	color: var(--cor-fonte-escura);
+	text-align: center;
+	min-height: calc(100vh - 70px);
+	font-size: 18px;
+ }
+
+#caixaInicio h1 {
+	font-weight: bold;
+	margin-top:20vh;
+	font-size: 30px;
+	font-weight: bold;
+ }
+
+ #caixaInicio .fotoPerfil {
+	width: 350px;
+	height: 350px;
+	border-radius: 350px;
+	margin: auto;
+	background-image: url('imagens/fotoperfil.jpg');
+	background-position: center center;
+	background-size: cover;
+	margin-bottom:25px;
+ }
+
+@media (max-width: 992px) { 
+	#caixaInicio .fotoPerfil {
+		width: 150px;
+		height: 150px;
+	border-radius: 150px;
+		background-size: contain;
+	}
+}
+
+
+#caixaHabilidades  {
+	padding-top: 70px;
+}
+
+#caixaHabilidades .faixa {
+	background-color: var(--cor-background-principal);
+	color: var(--cor-fonte-clara);
+	text-align: center;
+	padding: 60px 0px 240px;
+	font-size: 16px;
+
+}
+
+
+#caixaHabilidades h1 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#caixaHabilidades ul.caixaItensHabilidades {
+	margin-top: -220px;
+	background-color: #fff;
+	border-radius: 20px;
+	box-shadow: 0px 10px 7px #eee;
+	border: solid 1px #eee;
+	list-style: none;
+	padding: 25px 0px 25px;
+}
+
+#caixaHabilidades ul.caixaItensHabilidades li  {
+	text-align: center;
+}
+
+#caixaPortfolio {
+	color: var(--cor-fonte-escura);
+	text-align: center;
+	margin-top: 0px;
+	font-size: 18px;
+	padding-top: 70px;
+}
+
+#caixaPortfolio h1 {
+	font-size: 30px;
+	font-weight: bold;
+	padding-top: 80px;
+}
+
+#caixaPortfolio caixaPortfolioItens {
+	list-style: none;
+	padding: 0px;
+}
+
+#caixaPortfolio .caixaPortfolioItens a {
+	height: 250px;
+	background-size: cover;
+	background-position: center center;
+	border: solid 10px #fff;
+	border-radius: 20px;
+	display: block;
+}
+
+#caixaLinkRepositorio {
+	color: var(--cor-fonte-escura);
+	text-align: center;
+	margin: 50px auto 120px;
+	font-size: 22px;
+}
+
+#caixaLinkRepositorio h1 {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#caixaLinkRepositorio a {
+	border: solid 3px #000;
+	padding:10px 20px;
+	border-radius: 50px;
+	color: var(--cor-fonte-escura);
+	text-decoration: none;
+	display: table;
+	margin: auto;
+	margin-top: 30px;
+}
+
+
+
+#caixaRodape {
+	background-color: var(--cor-background-principal);
+
+	border-top: solid 1px #fff;
+	outline: solid 2px var(--cor-background-principal);
+}
+
+#caixaRodape .redesSociaisRodape {
+	display: table;
+	margin: auto;
+	padding: 50px 0px;
+}
+
+#caixaRodape .redesSociaisRodape img {
+	padding: 0px 5px;
+}
+
+.scrollToTop{   
+	display: block;
+	opacity: 0;
+	bottom: 25px;
+	right: 25px;
+	position: fixed;
+	border-left:solid 15px transparent;
+	border-right:solid 15px transparent;
+	border-bottom:solid 25px #262626;
+	border-top:solid 25px transparent;
+	transition: all 0.5s ease-in-out;
+}
+
+
+
