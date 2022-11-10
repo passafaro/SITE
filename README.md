@@ -8,25 +8,20 @@ um framework para desenvolvimento de aplicações PHP
 que facilita no desenvolvimento, sendo gratuito, leve, 
 rápido, extensível, possuindo estrutura MVC.
 
-*******************
-Vizualização do projeto
-*******************
+## Vizualização do projeto
 
 Para a visualização deste projeto o site encontra-se 
 hospedados no seguinte link:
 https://alessandropassaf1.websiteseguro.com/site/
 
 
-*******************
-Sobre o projeto
-*******************
+## Sobre o projeto
 
 Este projeto foi desenvolvido utilizando PHP, HTML, CSS e Javascript
 
 
-**************************
-Pré requisitos
-**************************
+
+## Pré requisitos
 
 Antes de iniciar o projeto, certifique-se que você tenha o docker e o Docker Compose instalado em seu ambiente.
 
