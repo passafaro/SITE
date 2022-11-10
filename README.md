@@ -4,7 +4,7 @@ Site Pessoal
 
 Este site apresenta diferentes informações pessoais 
 e proficionais como habilidades, portfólio, projetos, 
-redes sociais, dados de contato utilisando Codeigniter, 
+redes sociais, dados de contato utilizando Codeigniter, 
 um framework para desenvolvimento de aplicações PHP 
 que facilita no desenvolvimento, sendo gratuito, leve, 
 rápido, extensível, possuindo estrutura MVC.
