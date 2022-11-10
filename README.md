@@ -1,9 +1,9 @@
 # Site Pessoal
-## _Seja bem vindo
+## Seja bem vindo
 
 Este site apresenta diferentes informações pessoais 
-e proficionais como habilidades, portfólio, projetos, 
-redes sociais, dados de contato utilizando Codeigniter, 
+e profissionais como habilidades, portfólio, projetos, 
+redes sociais, dados de contato, utilizando Codeigniter 
 um framework para desenvolvimento de aplicações PHP 
 que facilita no desenvolvimento, sendo gratuito, leve, 
 rápido, extensível, possuindo estrutura MVC.
@@ -73,6 +73,12 @@ services:
     - ./custom.php.ini:/usr/local/etc/php/php.ini
 
 ```
+
+## Terminal
+
+Para iniciar e visualizar o status dos containers
+execute os seguintes comandos.
+
 
 ```bash
 # Supondo que esteja na raiz do projeto
