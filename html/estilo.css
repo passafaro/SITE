@@ -27,12 +27,12 @@ header nav a:hover {
   color: #fff;
 }
 @media (max-width: 992px) {
-  header nav .navMobile {
+  header nav.navMobile {
     padding: 0px;
   }
 }
 @media (max-width: 992px) {
-  header nav .navMobile a {
+  header nav.navMobile a {
     width: 100%;
     display: block;
     text-align: center;
@@ -42,7 +42,7 @@ header nav a:hover {
   }
 }
 @media (max-width: 992px) {
-  header nav .navMobile a:first-child {
+  header nav.navMobile a:first-child {
     border-top: none;
   }
 }

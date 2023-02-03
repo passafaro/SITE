@@ -33,12 +33,12 @@ z-index: 1;
         
             &:hover { 
                 font-weight: bold;
-                color: $cor-fonte-clara;
+                color: $cor-fonte-clara; 
             }
         }
 
 
-        .navMobile  {
+        &.navMobile  {
             @media (max-width: 992px) { 
                     padding: 0px;
             }
