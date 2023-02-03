@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Open+Sans:wght@300;800&display=swap');
+
+$cor-background-principal: #000;
+$cor-background-secundaria: #444;
+$cor-fonte-clara: #fff;
+$cor-fonte-escura: #000;
+$estilo-fonte-principal: 'Montserrat', sans-serif;
+
+
+* {
+    font-family: $estilo-fonte-principal;
+}
+
+
+header { 
+background-color: $cor-background-principal;
+border-bottom: solid 1px #fff;
+outline: solid 2px $cor-background-principal;
+position:fixed;
+z-index: 1;
+
+    nav { 
+        padding-left: 40px;
+
+        a { 
+            line-height: 70px;
+            padding: 0px 20px;
+            font-family: $estilo-fonte-principal;
+            color: $cor-fonte-clara;
+            font-size: 20px;
+            letter-spacing: -1.1px;
+            text-decoration: none;
+        
+            &:hover { 
+                font-weight: bold;
+                color: $cor-fonte-clara;
+            }
+        }
+
+
+        .navMobile  {
+            @media (max-width: 992px) { 
+                    padding: 0px;
+            }
+
+            a {
+                @media (max-width: 992px) { 
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    height: 30px;
+                    line-height: 30px;
+                    border-top:dotted 1px #fff ;
+                }
+
+                &:first-child {
+                    @media (max-width: 992px) { 
+                        border-top:none;
+                    }
+                }
+            }            
+        }
+    }
+
+
+
+    .redesSociaisTopo {
+        padding-top: 18px;
+
+        a {
+            text-decoration: none;
+            float: right;
+            padding: 0px 3px;
+        }
+    }
+
+
+
+    .redesSociaisTopoMobile {
+        margin: auto;
+        display: table;
+        padding: 18px 0px;
+
+        a {
+            text-decoration: none;
+            padding: 0px 3px;
+
+        }
+    }
+
+
+
+
+    #botaoNavMobile {
+        margin: auto;
+        display: table;
+        margin-bottom: 10px;
+    }
+
+
+}
+
+
+
+
+
+#caixaInicio {
+    color: $cor-fonte-escura;
+    text-align: center;
+    min-height: calc(100vh - 70px);
+    font-size: 18px;
+
+    h1 {
+        font-weight: bold;
+        margin-top:20vh;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .fotoPerfil {
+        width: 350px;
+        height: 350px;
+        border-radius: 350px;
+        margin: auto;
+        background-image: url('imagens/fotoperfil.jpg');
+        background-position: center center;
+        background-size: cover;
+        margin-bottom:25px;
+
+        @media (max-width: 992px) { 
+            width: 150px;
+            height: 150px;
+            border-radius: 150px;
+            background-size: contain;
+        }
+    }
+}
+
+
+
+
+#caixaHabilidades  {
+    padding-top: 70px;
+
+    .faixa {
+    background-color: $cor-background-principal;
+    color: $cor-fonte-clara;
+    text-align: center;
+    padding: 60px 0px 240px;
+    font-size: 16px;
+
+    }
+
+
+    h1 {
+    font-size: 30px;
+    font-weight: bold;
+    }
+
+    ul.caixaItensHabilidades {
+    margin-top: -220px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 10px 7px #eee;
+    border: solid 1px #eee;
+    list-style: none;
+    padding: 25px 0px 25px;
+
+        li  {
+            text-align: center;
+        }
+
+    }
+
+}
+
+
+
+#caixaPortfolio {
+    color: $cor-fonte-escura;
+    text-align: center;
+    margin-top: 0px;
+    font-size: 18px;
+    padding-top: 70px;
+
+
+    h1 {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 80px;
+    }
+
+
+
+    .caixaPortfolioItens a {
+        height: 250px;
+        background-size: cover;
+        background-position: center center;
+        border: solid 10px #fff;
+        border-radius: 20px;
+        display: block;
+    }
+
+}
+
+
+
+
+
+#caixaLinkRepositorio {
+    color: $cor-fonte-escura;
+    text-align: center;
+    margin: 50px auto 120px;
+    font-size: 22px;
+
+
+    h1 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .cards-repositorio  { 
+        margin: 10px 0px 20px;
+
+        a.bt-visualizar { 
+            padding:10px 20px;
+            border-radius: 50px;
+            color: $cor-fonte-clara;
+            background-color: $cor-background-principal;
+            text-decoration: none;
+            display: table;
+            margin: 30px auto 4px;
+            border: none;
+            font-size: 17px;	
+        
+            -webkit-transition: background-color 0.1s linear;
+            -moz-transition: background-color 0.1 linear;
+            -o-transition: background-color 0.1s linear;
+            -ms-transition: background-color 0.1s linear;
+            transition: background-color 0.1s linear;
+
+            :hover { 
+                background-color: $cor-background-secundaria;
+            }
+
+        }
+
+        a.link-repositorio { 
+            text-decoration: none;
+            color: $cor-fonte-escura;
+            font-size: 14px;
+
+            &:hover { 
+                font-weight: bold;
+            }
+
+            p { 
+                font-size: 16px;
+            }
+        }
+
+        
+    }
+
+    .cards-repositorio-item {
+        margin-bottom: 30px;
+    }
+
+    a.bt-repositoriogit { 
+        border: solid 3px #000;
+        padding:10px 20px;
+        border-radius: 50px;
+        color: $cor-fonte-escura;
+        text-decoration: none;
+        display: table;
+        margin: auto;
+        margin-top: 30px;
+
+        -webkit-transition: all 0.1s linear;
+        -moz-transition: all 0.1 linear;
+        -o-transition: all 0.1s linear;
+        -ms-transition: all 0.1s linear;
+        transition: all 0.1s linear;
+    }
+
+    a.bt-repositoriogit:hover { 
+        background-color: $cor-background-principal;
+        color: $cor-fonte-clara;
+    }
+
+}
+
+
+
+
+#caixaRodape {
+    background-color: $cor-background-principal;
+    border-top: solid 1px #fff;
+    outline: solid 2px $cor-background-principal;
+
+
+    .redesSociaisRodape {
+        display: table;
+        margin: auto;
+        padding: 50px 0px;
+    
+        img {
+            padding: 0px 5px;
+        }
+
+    }
+
+}
+
+
+.scrollToTop{   
+    display: block;
+    opacity: 0;
+    bottom: 25px;
+    right: 25px;
+    position: fixed;
+    border-left:solid 15px transparent;
+    border-right:solid 15px transparent;
+    border-bottom:solid 25px #262626;
+    border-top:solid 25px transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+
+

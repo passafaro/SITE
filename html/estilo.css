@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Open+Sans:wght@300;800&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  background-color: #000;
+  border-bottom: solid 1px #fff;
+  outline: solid 2px #000;
+  position: fixed;
+  z-index: 1;
+}
+header nav {
+  padding-left: 40px;
+}
+header nav a {
+  line-height: 70px;
+  padding: 0px 20px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: -1.1px;
+  text-decoration: none;
+}
+header nav a:hover {
+  font-weight: bold;
+  color: #fff;
+}
+@media (max-width: 992px) {
+  header nav .navMobile {
+    padding: 0px;
+  }
+}
+@media (max-width: 992px) {
+  header nav .navMobile a {
+    width: 100%;
+    display: block;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    border-top: dotted 1px #fff;
+  }
+}
+@media (max-width: 992px) {
+  header nav .navMobile a:first-child {
+    border-top: none;
+  }
+}
+header .redesSociaisTopo {
+  padding-top: 18px;
+}
+header .redesSociaisTopo a {
+  text-decoration: none;
+  float: right;
+  padding: 0px 3px;
+}
+header .redesSociaisTopoMobile {
+  margin: auto;
+  display: table;
+  padding: 18px 0px;
+}
+header .redesSociaisTopoMobile a {
+  text-decoration: none;
+  padding: 0px 3px;
+}
+header #botaoNavMobile {
+  margin: auto;
+  display: table;
+  margin-bottom: 10px;
+}
+
+#caixaInicio {
+  color: #000;
+  text-align: center;
+  min-height: calc(100vh - 70px);
+  font-size: 18px;
+}
+#caixaInicio h1 {
+  font-weight: bold;
+  margin-top: 20vh;
+  font-size: 30px;
+  font-weight: bold;
+}
+#caixaInicio .fotoPerfil {
+  width: 350px;
+  height: 350px;
+  border-radius: 350px;
+  margin: auto;
+  background-image: url("imagens/fotoperfil.jpg");
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 25px;
+}
+@media (max-width: 992px) {
+  #caixaInicio .fotoPerfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    background-size: contain;
+  }
+}
+
+#caixaHabilidades {
+  padding-top: 70px;
+}
+#caixaHabilidades .faixa {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 60px 0px 240px;
+  font-size: 16px;
+}
+#caixaHabilidades h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+#caixaHabilidades ul.caixaItensHabilidades {
+  margin-top: -220px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 10px 7px #eee;
+  border: solid 1px #eee;
+  list-style: none;
+  padding: 25px 0px 25px;
+}
+#caixaHabilidades ul.caixaItensHabilidades li {
+  text-align: center;
+}
+
+#caixaPortfolio {
+  color: #000;
+  text-align: center;
+  margin-top: 0px;
+  font-size: 18px;
+  padding-top: 70px;
+}
+#caixaPortfolio h1 {
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 80px;
+}
+#caixaPortfolio .caixaPortfolioItens a {
+  height: 250px;
+  background-size: cover;
+  background-position: center center;
+  border: solid 10px #fff;
+  border-radius: 20px;
+  display: block;
+}
+
+#caixaLinkRepositorio {
+  color: #000;
+  text-align: center;
+  margin: 50px auto 120px;
+  font-size: 22px;
+}
+#caixaLinkRepositorio h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+#caixaLinkRepositorio .cards-repositorio {
+  margin: 10px 0px 20px;
+}
+#caixaLinkRepositorio .cards-repositorio a.bt-visualizar {
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+  display: table;
+  margin: 30px auto 4px;
+  border: none;
+  font-size: 17px;
+  -webkit-transition: background-color 0.1s linear;
+  -moz-transition: background-color 0.1 linear;
+  -o-transition: background-color 0.1s linear;
+  -ms-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
+}
+#caixaLinkRepositorio .cards-repositorio a.bt-visualizar :hover {
+  background-color: #444;
+}
+#caixaLinkRepositorio .cards-repositorio a.link-repositorio {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+#caixaLinkRepositorio .cards-repositorio a.link-repositorio:hover {
+  font-weight: bold;
+}
+#caixaLinkRepositorio .cards-repositorio a.link-repositorio p {
+  font-size: 16px;
+}
+#caixaLinkRepositorio .cards-repositorio-item {
+  margin-bottom: 30px;
+}
+#caixaLinkRepositorio a.bt-repositoriogit {
+  border: solid 3px #000;
+  padding: 10px 20px;
+  border-radius: 50px;
+  color: #000;
+  text-decoration: none;
+  display: table;
+  margin: auto;
+  margin-top: 30px;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1 linear;
+  -o-transition: all 0.1s linear;
+  -ms-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+#caixaLinkRepositorio a.bt-repositoriogit:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+#caixaRodape {
+  background-color: #000;
+  border-top: solid 1px #fff;
+  outline: solid 2px #000;
+}
+#caixaRodape .redesSociaisRodape {
+  display: table;
+  margin: auto;
+  padding: 50px 0px;
+}
+#caixaRodape .redesSociaisRodape img {
+  padding: 0px 5px;
+}
+
+.scrollToTop {
+  display: block;
+  opacity: 0;
+  bottom: 25px;
+  right: 25px;
+  position: fixed;
+  border-left: solid 15px transparent;
+  border-right: solid 15px transparent;
+  border-bottom: solid 25px #262626;
+  border-top: solid 25px transparent;
+  transition: all 0.5s ease-in-out;
+}
+
+/*# sourceMappingURL=estilo.css.map */

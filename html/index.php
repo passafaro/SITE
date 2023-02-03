@@ -1,315 +1,198 @@
-<?php
-/**
- * CodeIgniter
- *
- * An open source application development framework for PHP
- *
- * This content is released under the MIT License (MIT)
- *
- * Copyright (c) 2014 - 2019, British Columbia Institute of Technology
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- * THE SOFTWARE.
- *
- * @package	CodeIgniter
- * @author	EllisLab Dev Team
- * @copyright	Copyright (c) 2008 - 2014, EllisLab, Inc. (https://ellislab.com/)
- * @copyright	Copyright (c) 2014 - 2019, British Columbia Institute of Technology (https://bcit.ca/)
- * @license	https://opensource.org/licenses/MIT	MIT License
- * @link	https://codeigniter.com
- * @since	Version 1.0.0
- * @filesource
- */
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="imagens/favicon.png">
+        <title>Alessandro Passafaro</title>
 
-/*
- *---------------------------------------------------------------
- * APPLICATION ENVIRONMENT
- *---------------------------------------------------------------
- *
- * You can load different configurations depending on your
- * current environment. Setting the environment also influences
- * things like logging and error reporting.
- *
- * This can be set to anything, but default usage is:
- *
- *     development
- *     testing
- *     production
- *
- * NOTE: If you change these, also change the error_reporting() code below
- */
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-/*
- *---------------------------------------------------------------
- * ERROR REPORTING
- *---------------------------------------------------------------
- *
- * Different environments will require different levels of error reporting.
- * By default development will show errors but testing and live will hide them.
- */
-switch (ENVIRONMENT)
-{
-	case 'development':
-		error_reporting(-1);
-		ini_set('display_errors', 1);
-	break;
+        <link rel="stylesheet" href="estilo.css">
 
-	case 'testing':
-	case 'production':
-		ini_set('display_errors', 0);
-		if (version_compare(PHP_VERSION, '5.3', '>='))
-		{
-			error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_STRICT & ~E_USER_NOTICE & ~E_USER_DEPRECATED);
-		}
-		else
-		{
-			error_reporting(E_ALL & ~E_NOTICE & ~E_STRICT & ~E_USER_NOTICE);
-		}
-	break;
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script src="js/scroll.js"></script>
 
-	default:
-		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
-		echo 'The application environment is not set correctly.';
-		exit(1); // EXIT_ERROR
-}
+    </head>
+    <body>
 
-/*
- *---------------------------------------------------------------
- * SYSTEM DIRECTORY NAME
- *---------------------------------------------------------------
- *
- * This variable must contain the name of your "system" directory.
- * Set the path if it is not in the same directory as this file.
- */
-	$system_path = 'system';
+        <header id="inicio" class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <nav class="d-none d-lg-block col-lg-8 col-xl-8" >
+                        <a href="#caixaInicio">Início</a>
+                        <a href="#caixaHabilidades">Habilidades</a>
+                        <a href="#caixaPortfolio">Portfólio</a>
+                        <a href="#caixaLinkRepositorio">Projetos</a>
+                    </nav>
 
-/*
- *---------------------------------------------------------------
- * APPLICATION DIRECTORY NAME
- *---------------------------------------------------------------
- *
- * If you want this front controller to use a different "application"
- * directory than the default one you can set its name here. The directory
- * can also be renamed or relocated anywhere on your server. If you do,
- * use an absolute (full) server path.
- * For more info please see the user guide:
- *
- * https://codeigniter.com/userguide3/general/managing_apps.html
- *
- * NO TRAILING SLASH!
- */
-	$application_folder = 'application';
+                    <div class="d-none d-lg-block col-lg-4 col-xl-4 redesSociaisTopo" >
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=5544999933625&text=Ol%C3%A1%20estou%20visitando%20o%20website%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas"><img alt="Whatsapp" src="imagens/icone-whats.png" ></a>
+                        <a target="_blank" href="https://github.com/passafaro/"><img alt="Github" src="imagens/icone-git.png" ></a>
+                        <a target="_blank" href="https://www.instagram.com/alessandropassafaro/"><img alt="instagram" src="imagens/icone-instagram.png" ></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/alessandro-passafaro"><img alt="linkedin" src="imagens/icone-linkedin.png" ></a>
+                        <a target="_blank" href="https://www.facebook.com/alessandro.passafaro.3"><img alt="facebook" src="imagens/icone-facebook.png" ></a>
+                    </div>
 
-/*
- *---------------------------------------------------------------
- * VIEW DIRECTORY NAME
- *---------------------------------------------------------------
- *
- * If you want to move the view directory out of the application
- * directory, set the path to it here. The directory can be renamed
- * and relocated anywhere on your server. If blank, it will default
- * to the standard location inside your application directory.
- * If you do move this, use an absolute (full) server path.
- *
- * NO TRAILING SLASH!
- */
-	$view_folder = '';
+                    <div class="col-12 d-lg-none   " >
+                        <div class="redesSociaisTopoMobile">
+                            <a target="_blank" href="https://www.facebook.com/alessandro.passafaro.3"><img alt="facebook" src="imagens/icone-facebook.png" ></a>
+                            <a target="_blank" href="https://www.linkedin.com/in/alessandro-passafaro"><img alt="linkedin" src="imagens/icone-linkedin.png" ></a>
+                            <a target="_blank" href="https://www.instagram.com/alessandropassafaro/"><img alt="instagram" src="imagens/icone-instagram.png" ></a>
+                            <a target="_blank" href="https://github.com/passafaro/"><img alt="Github" src="imagens/icone-git.png" ></a>
+                            <a target="_blank" href="https://api.whatsapp.com/send?phone=5544999933625&text=Ol%C3%A1%20estou%20visitando%20o%20website%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas"><img alt="Whatsapp" src="imagens/icone-whats.png" ></a>
+                        </div>
+                    </div>
 
+                    <div class="col-12 d-lg-none  " >
+                        <a id="botaoNavMobile" class="d-lg-none" data-bs-toggle="collapse"  href="#botoesNavegador"><img alt="botoes de navegação" src="imagens/botaoMobile.png" ></a>
+                        <nav class="navMobile collapse" id="botoesNavegador">
+                            <a href="#caixaInicio">Início</a>
+                            <a href="#caixaHabilidades">Habilidades</a>
+                            <a href="#caixaPortfolio">Portfólio</a>
+                            <a href="#caixaLinkRepositorio">Projetos</a>
+                        </nav>
+                    </div>
 
-/*
- * --------------------------------------------------------------------
- * DEFAULT CONTROLLER
- * --------------------------------------------------------------------
- *
- * Normally you will set your default controller in the routes.php file.
- * You can, however, force a custom routing by hard-coding a
- * specific controller class/function here. For most applications, you
- * WILL NOT set your routing here, but it's an option for those
- * special instances where you might want to override the standard
- * routing in a specific front controller that shares a common CI installation.
- *
- * IMPORTANT: If you set the routing here, NO OTHER controller will be
- * callable. In essence, this preference limits your application to ONE
- * specific controller. Leave the function name blank if you need
- * to call functions dynamically via the URI.
- *
- * Un-comment the $routing array below to use this feature
- */
-	// The directory name, relative to the "controllers" directory.  Leave blank
-	// if your controller is not in a sub-directory within the "controllers" one
-	// $routing['directory'] = '';
+                </div>
+            </div>
+        </header>
 
-	// The controller class file name.  Example:  mycontroller
-	// $routing['controller'] = '';
+        <div class="container" id="caixaInicio">
+            <div class="row justify-content-center">
+                <div class="col-10 col-sm-9 col-md-8 col-lg-6 ">
+                    <h1>Olá, sou<br>Alessandro Passafaro.</h1>
+                    <p>Desenvolvedor Web  com conhecimentos na construção, hospedagem e manutenção de sites, hotsites, landing pages, e-commerces.</p>
+                    <div class="fotoPerfil"></div>
+                </div>
+            </div>
+        </div>
 
-	// The controller function you wish to be called.
-	// $routing['function']	= '';
+        <div class="container-fluid" id="caixaHabilidades">
+            <div class="row justify-content-center faixa">
+                <div class="col-12 col-sm-8 col-md-6 col-lg-5 ">
+                    <h1>Principais Habilidades</h1>
+                    <p>Experiência, criatividade e Inovação em<br>desenvolvimento para a Internet</p>
+                </div>
+            </div>
+            <div class="container">    
+                <ul class="row justify-content-center caixaItensHabilidades">
+                    <li class="col-12 col-sm-6 col-lg-4 col-xl-3"><img alt="Portfolio" class="img-fluid" src="imagens/h1.png"></li>
+                    <li class="col-12 col-sm-6 col-lg-4 col-xl-3"><img alt="Portfolio" class="img-fluid" src="imagens/h2.png"></li>
+                    <li class="col-12 col-sm-6 col-lg-4 col-xl-3"><img alt="Portfolio" class="img-fluid" src="imagens/h3.png"></li>
+                    <li class="col-12 col-sm-6 col-lg-4 col-xl-3"><img alt="Portfolio" class="img-fluid" src="imagens/h3b.png"></li>
+                    <li class="col-12 col-sm-6 col-lg-4 col-xl-3"><img alt="Portfolio" class="img-fluid" src="imagens/h4.png"></li>
+                    <li class="col-12 col-sm-6 col-lg-4 col-xl-3"><img alt="Portfolio" class="img-fluid" src="imagens/h5.png"></li>
+                    <li class="col-12 col-sm-6 col-lg-4 col-xl-3"><img alt="Portfolio" class="img-fluid" src="imagens/h6.png"></li>
+                    <li class="col-12 col-sm-6 col-lg-4 col-xl-3"><img alt="Portfolio" class="img-fluid" src="imagens/h7.png"></li>
+                </ul>
+            </div>
+        </div>
 
+        <div class="container-fluid" id="caixaPortfolio">
+            <div class="container ">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-8 col-md-6 col-lg-5 ">
+                        <h1>Portfólio</h1>
+                        <p>Desenvolvimento de sites responsivos e modernos</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center caixaPortfolioItens">
+                    <a href="https://rottadelsitesegu1.websiteseguro.com/" 				target="_blank" class="col-12 col-sm-6 col-lg-4 col-xl-4" style="background-image:url('imagens/portfolio7.jpg')" ></a>
+                    <a href="https://www.pneusjandaia.com.br/" 		target="_blank" class="col-12 col-sm-6 col-lg-4 col-xl-4" style="background-image:url('imagens/portfolio4.jpg')" ></a>
+                    <a href="https://imperioduchopp.com.br/" 		target="_blank" class="col-12 col-sm-6 col-lg-4 col-xl-4" style="background-image:url('imagens/portfolio8.jpg')" ></a>
+                    <a href="https://maringahospitalar.com.br/" 	target="_blank" class="col-12 col-sm-6 col-lg-4 col-xl-4" style="background-image:url('imagens/portfolio3.jpg')" ></a>
+                    <a href="https://artatualplanejados.com.br/" 	target="_blank" class="col-12 col-sm-6 col-lg-4 col-xl-4" style="background-image:url('imagens/portfolio2.jpg')" ></a>
+                    <a href="https://samecmoveis.com.br/" 			target="_blank" class="col-12 col-sm-6 col-lg-4 col-xl-4" style="background-image:url('imagens/portfolio6.jpg')" ></a>
+                </div>
+            </div>
+        </div>
 
-/*
- * -------------------------------------------------------------------
- *  CUSTOM CONFIG VALUES
- * -------------------------------------------------------------------
- *
- * The $assign_to_config array below will be passed dynamically to the
- * config class when initialized. This allows you to set custom config
- * items or override any default config values found in the config.php file.
- * This can be handy as it permits you to share one application between
- * multiple front controller files, with each file containing different
- * config values.
- *
- * Un-comment the $assign_to_config array below to use this feature
- */
-	// $assign_to_config['name_of_config_item'] = 'value of config item';
+        <div class="container-fluid" id="caixaLinkRepositorio">
+            <div class="container ">
 
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-8 col-md-8 col-lg-8" >
+                        <h1>Projetos</h1>
+                        <p>Acesse e confira alguns projetos disponibilizados</p>
+                    </div>
+                </div>
 
+                <div class="row justify-content-center cards-repositorio" >
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-xl-3 cards-repositorio-item">
+                            <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title align-bottom">projeto_php</h3>
+                                <p class="card-text">Este projeto foi desenvolvido para demonstrar o gerenciamento de empresas e seus funcionarios. Foi utilizando Codeigniter que facilita no desenvolvimento, sendo gratuito, leve, rápido, extensível, possuindo estrutura MVC. Para o front-end foi utilizado Bootstrap 4.</p>
+                                <a target="_blank" href="http://projetophp.alessandropassafaro.com.br/" class="bt-visualizar btn btn-primary">Vizualizar projeto</a>
+                                <p><a target="_blank"  class="link-repositorio" href="https://github.com/passafaro/projeto_php">link repositorio github</a></p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-3 cards-repositorio-item">
+                            <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">login-social-google</h3>
+                                <p class="card-text">Este projeto demonstra o login-social-google, permitindo que usuários acessem sua aplicação ou site sem a necessidade de fazer um cadastro prévio, utilizando o login e senha de alguma rede social.</p>
+                                <a target="_blank" href="https://alessandropassaf1.websiteseguro.com/login-social-google/" class="bt-visualizar btn btn-primary">Vizualizar projeto</a>
+                                <p><a target="_blank"  class="link-repositorio" href="https://github.com/passafaro/login-social-google">link repositorio github</a></p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-3 cards-repositorio-item">
+                            <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">GitHub Dados Autenticados</h3>
+                                <p class="card-text">Este projeto demonstra a obtenção de dados e a lista de repositórios de um usuário autenticado no GitHub.</p>
+                                <a target="_blank" href="https://alessandropassaf1.websiteseguro.com/github-lista-usuario-autenticado/" class="bt-visualizar btn btn-primary">Vizualizar projeto</a>
+                                <p><a target="_blank"  class="link-repositorio" href="https://github.com/passafaro/gitHubDadosAutenticados">link repositorio github</a></p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-3 cards-repositorio-item">
+                            <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Data API YouTube - Search: list</h3>
+                                <p class="card-text">Este projeto demonstra uma solicitação da API YouTube, retornando um conjunto de resultados de pesquisa que correspondem a parâmetros de consulta especificados.</p>					
+                                <a target="_blank"  href="https://alessandropassaf1.websiteseguro.com/youtube/" class="bt-visualizar btn btn-primary">Vizualizar projeto</a>
+                                <p><a target="_blank"  class="link-repositorio" href="https://github.com/passafaro/DataAPIYouTube">link repositorio github</a></p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-// --------------------------------------------------------------------
-// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
-// --------------------------------------------------------------------
+                <div class="row justify-content-center" >
+                    <div class="col-12 col-sm-8 col-md-8 col-lg-8" >
+                        <p>Acesse e confira estes e alguns outros projetos disponibilizados</p> 
+                        <a class="bt-repositoriogit" target="_blank" href="https://github.com/passafaro?tab=repositories">Repositórios no GitHub</a>
+                    </div>
 
-/*
- * ---------------------------------------------------------------
- *  Resolve the system path for increased reliability
- * ---------------------------------------------------------------
- */
+                </div>
+            </div>
+        </div>
 
-	// Set the current directory correctly for CLI requests
-	if (defined('STDIN'))
-	{
-		chdir(dirname(__FILE__));
-	}
+        <footer class="container-fluid" id="caixaRodape">
+            <div class="container ">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-8 col-md-8 col-lg-8" >
+                        <div class="redesSociaisRodape" >
+                            <a target="_blank" href="https://www.facebook.com/alessandro.passafaro.3"><img alt="Facebook" src="imagens/icone-facebook.png" ></a>
+                            <a target="_blank" href="https://www.linkedin.com/in/alessandro-passafaro"><img alt="linkedin" src="imagens/icone-linkedin.png" ></a>
+                            <a target="_blank" href="https://www.instagram.com/alessandropassafaro/"><img alt="instagram" src="imagens/icone-instagram.png" ></a>
+                            <a target="_blank" href="https://github.com/passafaro/"><img alt="github" src="imagens/icone-git.png" ></a>
+                            <a target="_blank" href="https://api.whatsapp.com/send?phone=5544999933625&text=Ol%C3%A1%20estou%20visitando%20o%20website%20e%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas"><img alt="whatsapp" src="imagens/icone-whats.png" ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-	if (($_temp = realpath($system_path)) !== FALSE)
-	{
-		$system_path = $_temp.DIRECTORY_SEPARATOR;
-	}
-	else
-	{
-		// Ensure there's a trailing slash
-		$system_path = strtr(
-			rtrim($system_path, '/\\'),
-			'/\\',
-			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
-		).DIRECTORY_SEPARATOR;
-	}
+        <a href="#" class="scrollToTop"></a>
 
-	// Is the system path correct?
-	if ( ! is_dir($system_path))
-	{
-		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
-		echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME);
-		exit(3); // EXIT_CONFIG
-	}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
-/*
- * -------------------------------------------------------------------
- *  Now that we know the path, set the main path constants
- * -------------------------------------------------------------------
- */
-	// The name of THIS file
-	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
-
-	// Path to the system directory
-	define('BASEPATH', $system_path);
-
-	// Path to the front controller (this file) directory
-	define('FCPATH', dirname(__FILE__).DIRECTORY_SEPARATOR);
-
-	// Name of the "system" directory
-	define('SYSDIR', basename(BASEPATH));
-
-	// The path to the "application" directory
-	if (is_dir($application_folder))
-	{
-		if (($_temp = realpath($application_folder)) !== FALSE)
-		{
-			$application_folder = $_temp;
-		}
-		else
-		{
-			$application_folder = strtr(
-				rtrim($application_folder, '/\\'),
-				'/\\',
-				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
-			);
-		}
-	}
-	elseif (is_dir(BASEPATH.$application_folder.DIRECTORY_SEPARATOR))
-	{
-		$application_folder = BASEPATH.strtr(
-			trim($application_folder, '/\\'),
-			'/\\',
-			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
-		);
-	}
-	else
-	{
-		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
-		echo 'Your application folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
-		exit(3); // EXIT_CONFIG
-	}
-
-	define('APPPATH', $application_folder.DIRECTORY_SEPARATOR);
-
-	// The path to the "views" directory
-	if ( ! isset($view_folder[0]) && is_dir(APPPATH.'views'.DIRECTORY_SEPARATOR))
-	{
-		$view_folder = APPPATH.'views';
-	}
-	elseif (is_dir($view_folder))
-	{
-		if (($_temp = realpath($view_folder)) !== FALSE)
-		{
-			$view_folder = $_temp;
-		}
-		else
-		{
-			$view_folder = strtr(
-				rtrim($view_folder, '/\\'),
-				'/\\',
-				DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
-			);
-		}
-	}
-	elseif (is_dir(APPPATH.$view_folder.DIRECTORY_SEPARATOR))
-	{
-		$view_folder = APPPATH.strtr(
-			trim($view_folder, '/\\'),
-			'/\\',
-			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
-		);
-	}
-	else
-	{
-		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
-		echo 'Your view folder path does not appear to be set correctly. Please open the following file and correct this: '.SELF;
-		exit(3); // EXIT_CONFIG
-	}
-
-	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
-
-/*
- * --------------------------------------------------------------------
- * LOAD THE BOOTSTRAP FILE
- * --------------------------------------------------------------------
- *
- * And away we go...
- */
-require_once BASEPATH.'core/CodeIgniter.php';
+    </body>
+</html>

@@ -1,12 +1,9 @@
 # Site Pessoal
 ## Seja bem vindo
 
-Este site apresenta diferentes informações pessoais 
+Este site apresenta informações pessoais 
 e profissionais como habilidades, portfólio, projetos, 
-redes sociais, dados de contato, utilizando Codeigniter 
-um framework para desenvolvimento de aplicações PHP 
-que facilita no desenvolvimento, sendo gratuito, leve, 
-rápido, extensível, possuindo estrutura MVC.
+redes sociais, dados de contato, desenvolvido.
 
 ## Vizualização do projeto
 
@@ -17,7 +14,7 @@ https://alessandropassaf1.websiteseguro.com/site/
 
 ## Sobre o projeto
 
-Este projeto foi desenvolvido utilizando PHP, HTML, CSS e Javascript
+Este projeto foi desenvolvido utilizando HTML, CSS e Javascript
 
 
 
